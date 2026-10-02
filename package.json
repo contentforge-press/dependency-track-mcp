@@ -1,0 +1,21 @@
+{
+  "name": "dependency-track-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for OWASP Dependency-Track: efficient aggregate security/risk tools, not a 1:1 REST proxy.",
+  "type": "module",
+  "bin": { "dependency-track-mcp": "dist/index.js" },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test --import tsx ./test/*.test.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
